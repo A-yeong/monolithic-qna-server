@@ -1,6 +1,6 @@
 package com.example.monolithic.qna.server.general.application.service;
 
-import com.example.monolithic.qna.server.general.adapter.out.api.UserAuthAPI;
+import com.example.monolithic.qna.server.general.adapter.out.api.TempUserAuthAPI;
 import com.example.monolithic.qna.server.general.application.port.in.web.GeneralUserDataInputPort;
 import com.example.monolithic.qna.server.general.application.port.out.hashmap.ordinary.GeneralUserDataOutputPort;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class GeneralUserService implements GeneralUserDataInputPort {
     private static final Logger logger = Logger.getLogger(GeneralUserService.class.getName());
 
-    private final UserAuthAPI userAuthAPI;
+    private final TempUserAuthAPI userAuthAPI;
     private final GeneralUserDataOutputPort persistenceAdapter;
 
     /**

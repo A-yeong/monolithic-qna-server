@@ -7,10 +7,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * <b> 회원관리 API 요청 </b>
+ * <p>
+ * - 빈 이름 충돌로 temp를 prefix로 작성
+ * - 모듈 분리 시 expert의 UserAuthAPI 재사용 계획
+ * </p>
  */
 @Component
 @RequiredArgsConstructor
-public class UserAuthAPI {
+public class TempUserAuthAPI {
     private final UserAdapter userInputAdapter;
 
     /**

@@ -26,13 +26,12 @@ public class UserPersistenceAdapter {
      * </p>
      */
     public void saveUser(User user) {
-        if (users.containsKey(user.getId())) {
-            users.replace(user.getId(), user);
+        if (users.containsKey(user.getUserId())) {
+            users.replace(user.getUserId(), user);
             return;
         }
-        String id = getStringId();
-        users.put(id, user);
-        user.save(id);
+        users.put(user.getUserId(), user);
+        user.save(getStringId());
 
         autoIncrement++;
     }
