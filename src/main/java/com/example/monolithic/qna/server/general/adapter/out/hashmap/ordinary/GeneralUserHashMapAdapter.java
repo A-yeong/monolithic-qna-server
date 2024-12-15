@@ -1,4 +1,4 @@
-package com.example.monolithic.qna.server.general.application.port.out.hashmap.ordinary;
+package com.example.monolithic.qna.server.general.adapter.out.hashmap.ordinary;
 
 import org.springframework.stereotype.Component;
 
