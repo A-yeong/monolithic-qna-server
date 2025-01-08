@@ -26,13 +26,13 @@ public class GeneralUserHashMapAdapter implements GeneralUserDataOutputPort {
      * - 이메일과 나이는 예시 데이터
      * </p>
      *
-     * @param id 아이디
+     * @param userId 아이디
      * @param email 예시 데이터
      * @param age 예시 데이터
      */
     @Override
-    public void saveGeneralUser(String id, String email, int age) {
-        users.put(id, new GeneralUserEntity(email, age));
-        System.out.printf("저장된 데이터: 아이디 = %s, 이메일 = %s, 나이 = %d \n", id, email, age);
+    public void saveGeneralUser(String userId, String email, int age) {
+        users.put(userId, new GeneralUserEntity(email, age));
+        System.out.printf("저장된 데이터: 아이디 = %s, 이메일 = %s, 나이 = %d \n", userId, email, age);
     }
 }
