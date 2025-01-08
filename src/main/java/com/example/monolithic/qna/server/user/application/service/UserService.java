@@ -43,7 +43,7 @@ public class UserService {
      * @return 로그인 성공 여부
      */
     public boolean signIn(String userId, String pw) {
-        User user = persistenceAdapter.findById(userId);
+        User user = persistenceAdapter.findByUserId(userId);
         if (user == null || !user.getPw().equals(pw)) {
             logger.log(Level.WARNING, "로그인 실패 : 잘못된 ID 또는 비밀번호");
             return false;

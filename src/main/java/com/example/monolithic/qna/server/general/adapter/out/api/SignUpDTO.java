@@ -5,8 +5,8 @@ import com.example.monolithic.qna.server.user.adapter.in.other.request.UserSignU
 /**
  * <b> 회원가입 DTO </b>
  */
-public record SignUpDTO(String id, String pw, String role) {
-    public static UserSignUpRequest to(String id, String pw, String role) {
-        return new UserSignUpRequest(id, pw, role);
+public record SignUpDTO(String userId, String pw, String role) {
+    public static UserSignUpRequest to(String userId, String pw, String role) {
+        return new UserSignUpRequest(userId, pw, role);
     }
 }

@@ -40,8 +40,8 @@ public class UserPersistenceAdapter {
      * <b> id로 유저가 존재하는지 확인 </b>
      * @return 조회한 유저 아이디를 가지고 있는 유저
      */
-    public User findById(String id) {
-        return users.get(id);
+    public User findByUserId(String userId) {
+        return users.get(userId);
     }
 
     /**
