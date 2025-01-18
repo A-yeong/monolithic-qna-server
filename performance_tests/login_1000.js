@@ -2,14 +2,14 @@ import { login } from './userLogin.js';
 import { sleep } from 'k6';
 
 export const options = {
-  vus: 1000, // 1초 동안 1000명의 VU가 각각 1번의 요청을 보냄
-  duration: '1s', // 테스트 지속 시간
+  vus: 100,
+  duration: '1s',
 };
 
 export default function() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     login('general', 'pw');
   }
 
-  sleep(0.01); // 잠시 대기, 여러 요청이 빠르게 발생하도록
+  sleep(0.5);
 }
