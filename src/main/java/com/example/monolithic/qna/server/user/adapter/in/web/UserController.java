@@ -6,10 +6,7 @@ import com.example.monolithic.qna.server.user.application.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <b> 유저 컨트롤러 </b>
@@ -17,9 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
  * - 유저 정보 관리
  * </p>
  */
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8077")
 public class UserController {
     private final UserService userService;
 

@@ -6,10 +6,7 @@ import com.example.monolithic.qna.server.expert.application.service.ExpertUserSe
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <b> 전문가 유저 컨트롤러 </b>
@@ -17,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * - 전문가 유저 정보 관리 <br>
  * </p>
  */
+@CrossOrigin(origins = "http://localhost:8077")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
